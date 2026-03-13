@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter's Awakening</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png".
 </head>
-
 <body>
+    <span style="display:none;">"I can hear her breathing on the other side. 
+        She hasn't knocked yet. If I stay quiet enough, maybe the door stays a wall."</span>
 
-    <main class="container">
-        <h1 class="title">Winter's Awakening</h1>
+    <audio id="bgm" loop>
+        <source src="audio/stx_titleWind.wav" type="audio/wav">
+    </audio>
 
-        <div class="divider"></div>
+    <div id="loader">
+        <div class="loaderContent">
+            <h1 class="loaderTitle">Winter's Awakening</h1>
+            <div class="divider"></div>
+            <div id="statusContainer">
+                <p>INITIALIZING CONNECTION<span class="loading"></span></p>
+                <button id="startBtn">INITIALIZE</button>
+            </div>
+        </div>
+    </div>
 
-        <section class="content-box">
-            <p class="loading"></p>
-        </section>
+    <span style="display:none;">"She called me a waste of space. 
+        I'm going to make a space where she doesn't exist. 
+        I'm going to build a forest and let it bury us both."</span>
+    <main id="homepage" class="hidden">
+        <div class="snowLayer3"></div> 
+        
+        <div class="mainContent">
+            <h1 class="title" style="color: var(--portal-blue);">SNOWY FOREST</h1>
+            
+            <div class="dialogueContainer">
+                <div id="typewriter" class="dialogueText"></div>
+            </div>
+        </div>
     </main>
-    <script src="loading.js"></script>
-</body>
 
+    <script src="scripts/loading.js"></script>
+</body>
 </html>
