@@ -75,7 +75,7 @@ startBtn.addEventListener('click', async () => {
     await typeWriter("...", 120)
     await sleep(1500);
 
-    await typeWriter("The cold, crisp air stings your eyes.", 50)
+    await typeWriter(" The cold, crisp air stings your eyes.", 50)
 });
 
 async function load() {
