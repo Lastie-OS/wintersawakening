@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'aaalex-ui';
+    src: url('fonts/aaalex-ui.ttf') format('truetype');
+}
+
+:root {
+    --black: #0d0d0e;
+    --grey-dark: #1a1a1c;
+    --white: #d1dbe4;
+    --accent: #8899a6; /* A muted blue-grey for borders/details */
+    --glow: rgba(209, 219, 228, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'aaalex-ui', 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--glow);
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 40px 0;
+}
+
+.content-box {
+    background: var(--grey-dark);
+    border: 1px solid #2a2a2c;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Subtle scanline effect for that retro feel */
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    z-index: 2;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+}
+
+.loading {
+    position: relative;
+    left: -10%;
+    display: inline-block;
+    width: 24px;
+    text-align: left;
+    font-family: 'aaalex-ui', monospace; /* Monospace keeps dot width consistent */
+}
