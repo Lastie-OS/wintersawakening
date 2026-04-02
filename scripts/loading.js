@@ -55,6 +55,12 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 startBtn.addEventListener('click', async () => {
     loaderScreen.style.opacity = '0';
 
+    document.title = "Winter's Awakening - Snowy Forest";
+        gtag('event', 'page_view', {
+            page_title: "Winter's Awakening - Snowy Forest",
+              page_path: '/forest'
+        });
+
     // The scent of Rose Perfume is clogging the vents. The floor is thudding. Code faster.
     await sleep(800);
     loaderScreen.classList.add('hidden');
